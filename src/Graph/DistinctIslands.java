@@ -6,10 +6,10 @@ public class DistinctIslands {
 
     public static void main(String[] args) {
         int[][] grid = {
-                {0, 1, 1, 0},
-                {0, 0, 1, 0},
-                {0, 0, 1, 0},
-                {0, 0, 0, 0}
+                {1, 1, 0, 0},
+                {0, 0, 0, 0},
+                {0, 0, 0, 0},
+                {0, 0, 1, 1}
         };
 
         DistinctIslands solution = new DistinctIslands();
@@ -42,6 +42,9 @@ public class DistinctIslands {
                     if(visited[i][j]==0 && arr[i][j]==1){
                         ArrayList<Pair> temp = new ArrayList<>();
                         dfs(i,j,arr,temp,n,m,visited,i,j);
+                        for(Pair nums : temp){
+                            System.out.println(nums);
+                        }
                         set.add(temp);
                     }
                 }

@@ -4,6 +4,33 @@ public class TopologicalSort {
     public static void main(String[] args) {
 
     }
+    public static int[] bfs(int V,ArrayList<ArrayList<Integer>> adj){
+        int[] indegree = new int[V];
+        for(int i = 0;i<V;i++){
+            for(int num : adj.get(i)){
+                indegree[num]++;
+            }
+        }
+        Queue<Integer> q = new LinkedList<>();
+        for(int i = 0;i<V;i++){
+            if(indegree[i]==0){
+                q.add(i);
+            }
+        }
+        int[] toposort = new int[V];
+        int j = 0;
+        while(!q.isEmpty()){
+            int node = q.poll();
+            toposort[j++] = node;
+            for(int num : adj.get(node)){
+                indegree[num]--;
+                if(indegree[num]==0){
+                    q.add(num);
+                }
+            }
+        }
+        return toposort;
+    }
     public static void dfs(int node,int[] visited,ArrayList<ArrayList<Integer>> adj, Stack<Integer> stack){
         visited[node] = 1;
         for(int num: adj.get(node)){

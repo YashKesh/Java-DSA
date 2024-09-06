@@ -6,7 +6,7 @@ public class SurroundedRegionSolver {
                 {'X', 'X', 'X', 'X'},
                 {'X', 'O', 'O', 'X'},
                 {'X', 'X', 'O', 'X'},
-                {'X', 'X', 'X', 'X'}
+                {'O', 'O', 'X', 'X'}
         };
 
         SurroundedRegionSolver solver = new SurroundedRegionSolver();

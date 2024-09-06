@@ -3,11 +3,17 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.Queue;
-
-
+class Pair{
+    int first;
+    int second;
+    public Pair(int first,int second){
+        this.first  = first;
+        this.second = second;
+    }
+}
 public class CycleDetectionInUndirected {
     public static void main(String[] args) {
-        CycleDetectionInUndirected sol = new CycleDetectionInUndirected();
+        
         System.out.println(cycleDetection(new int[][]{{1,2},{2,3},{3,4},{4,1}},4,5));
     }
 

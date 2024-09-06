@@ -2,7 +2,7 @@ package Graph;
 import java.util.*;
 public class BFS {
     public static void main(String[] args) {
-        BFS sol = new BFS();
+        // BFS sol = new BFS();
 //        List<List<Integer>> adj = new ArrayList<>();
         List<List<Integer>> adj = new ArrayList<>();
         adj.add(Arrays.asList(0, 1));
@@ -53,7 +53,7 @@ public class BFS {
                     map.get(v).add(u);
                 }
             }
-            System.out.print(map);
+//            System.out.print(map);
 
             List<Integer> res = new ArrayList<>();
             boolean[] visited = new boolean[n];
