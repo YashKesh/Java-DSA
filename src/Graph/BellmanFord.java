@@ -8,7 +8,7 @@ public class BellmanFord {
             Arrays.fill(dist,(int)1e8);
             dist[S] = 0;
             for(int i = 0;i<V-1;i++){
-                for(int j = 0;j<edges.size();j++){
+                for(int j = 0;j<edges.size();j++){  
                     int src = edges.get(j).get(0);
                     int dst = edges.get(j).get(1);
                     int wt = edges.get(j).get(2);

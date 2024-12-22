@@ -1,5 +1,4 @@
 package Graph;
-import java.util.*;
 /*
 The problem is to find the shortest distances between every pair of vertices in a given edge-weighted directed graph.
 The graph is represented as an adjacency matrix of size n*n. Matrix[i][j] denotes the weight of the edge from i to j.
@@ -12,7 +11,7 @@ Explanation: The shortest distance between every pair is already given(if it exi
  */
 public class FloydWarshall {
 
-        public void shortest_distance(int[][] matrix)
+        public void ShortestDistance(int[][] matrix)
         {
             // Code here
             int n = matrix.length;
@@ -20,7 +19,7 @@ public class FloydWarshall {
                 for(int j = 0;j<n;j++){
                     if(matrix[i][j] == -1){
                         matrix[i][j] = (int)1e9;
-                    }
+                    }   
                     if(i == j){
                         matrix[i][j] = 0;
                     }
