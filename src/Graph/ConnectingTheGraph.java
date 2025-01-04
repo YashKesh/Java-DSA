@@ -1,5 +1,10 @@
 package Graph;
-
+/*
+ * You are given a graph with n vertices (0 to n-1) and m edges. 
+ * You can remove one edge from anywhere and add that edge between any two vertices in one operation.
+ * Find the minimum number of operations that will be required to connect the graph.
+ * If it is not possible to connect the graph, return -1.
+ */
 public class ConnectingTheGraph {
     public int Solve(int n, int[][] edge) {
         // Code here

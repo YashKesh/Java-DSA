@@ -1,7 +1,12 @@
 package Graph;
 import java.util.ArrayList;
 import java.util.HashSet;
-
+/*
+ * Given a grid of dimension nxm containing 0s and 1s. Find the number of distinct islands.
+ * A group of connected 1s forms an island. Two islands are considered to be distinct if none of the islands can be transformed 
+ * into another by rotating or flipping.
+ * 
+ */
 public class DistinctIslands {
 
     public static void main(String[] args) {
