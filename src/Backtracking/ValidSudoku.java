@@ -18,10 +18,7 @@ public class ValidSudoku {
     }
         public static boolean isSafe(char[][] board,int row,int col,char num){
             for(int i = 0;i<board.length;i++){
-                if(board[row][i]==num){
-                    return false;
-                }
-                else if(board[i][col]==num){
+                if(board[row][i]==num || board[i][col]==num){
                     return false;
                 }
             }

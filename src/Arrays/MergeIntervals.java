@@ -1,15 +1,29 @@
 package Arrays;
 import  java.util.*;
+/*
+ * Given an array of intervals where intervals[i] = [starti, endi], merge all overlapping intervals, 
+ * and return an array of the non-overlapping intervals that cover all the intervals in the input.
+Example 1:
+
+Input: intervals = [[1,3],[2,6],[8,10],[15,18]]
+Output: [[1,6],[8,10],[15,18]]
+Explanation: Since intervals [1,3] and [2,6] overlap, merge them into [1,6].
+Example 2:
+
+Input: intervals = [[1,4],[4,5]]
+Output: [[1,5]]
+Explanation: Intervals [1,4] and [4,5] are considered overlapping.
+ */
 public class MergeIntervals {
-    public static void main(String[] args) {
-        MergeIntervals sol = new MergeIntervals();
-        int[][] ans = sol.merge(new int[][]{{1, 3}, {2, 6}, {8, 10}, {15, 18}});
+    public static void main(final String[] args) {
+        final MergeIntervals sol = new MergeIntervals();
+        final int[][] ans = sol.merge(new int[][]{{1, 3}, {2, 6}, {8, 10}, {15, 18}});
 
     }
-    public int[][] merge(int[][] intervals) {
-        Stack<int[]> stack = new Stack<>();
+    public int[][] merge(final int[][] intervals) {
+        final Stack<int[]> stack = new Stack<>();
         Arrays.sort(intervals,(a,b)->Integer.compare(a[0],b[0]));
-        for(int[] interval : intervals){
+        for(final int[] interval : intervals){
             if(stack.isEmpty() || stack.peek()[1]<interval[0]){
                 stack.push(interval);
             }

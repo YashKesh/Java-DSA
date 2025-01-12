@@ -1,9 +1,6 @@
 package Arrays;
 import java.io.*;
 import java.util.*;
-import java.text.*;
-import java.math.*;
-import java.util.regex.*;
 
 //class Solution {
 public class Mergeint {
