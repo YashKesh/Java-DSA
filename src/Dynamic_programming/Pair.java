@@ -1,7 +1,7 @@
 package Dynamic_programming;
 
 public class Pair<T, T1> {
-    int first;
+    public int first;
     int second;
     public Pair(int first,int second){
         this.first = first;
