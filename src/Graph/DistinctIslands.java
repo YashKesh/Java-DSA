@@ -22,8 +22,7 @@ public class DistinctIslands {
 
         System.out.println("Number of distinct islands: " + result);
     }
-//    public class Solution
-//    {
+
         public static void dfs(int i,int j,int[][] arr,ArrayList<Pair> temp, int n, int m,int[][] visited,int row0,int col0){
             visited[i][j] = 1;
             int[] delrow = {1,0,-1,0};
@@ -58,5 +57,3 @@ public class DistinctIslands {
 
         }
     }
-
-//}
