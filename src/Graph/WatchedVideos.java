@@ -2,6 +2,19 @@ package Graph;
 import  java.util.*;
 import java.util.stream.Collectors;
 
+/*
+ * There are n people, each person has a unique ID between 0 and n-1. Given the arrays watchedVideos and friends, 
+ * where watchedVideos[i] and friends[i] contain the list of watched videos and the list of friends for the person with ID = i.
+ * 
+ * Level 1 of a person is their friends. Level k of a person is level 1 of all the persons that are friends of the person and so on.
+ * 
+ * Two persons are friends if they have a direct connection and there is no friend request pending.
+ * 
+ * The watchedVideos of one person is a list of videos that the person has watched.
+ * 
+ * 
+ * Return the list of videos with the most watched videos by friends of the person with the given id and level.
+ */
 class WatchedVideos {
     public List<String> watchedVideosByFriends(List<List<String>> watchedVideos, int[][] friends, int id, int level) {
         Queue<Integer> q = new LinkedList<>();

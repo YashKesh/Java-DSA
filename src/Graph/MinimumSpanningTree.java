@@ -1,5 +1,11 @@
 package Graph;
 import java.util.*;
+/* 
+ * Minimum spanning tree is the tree with all  the vertex and the smallest weights to cover all the edges connecting to the vertex
+ * The minimum spanning tree of a graph is a subset of the edges that connect all the vertices together while
+ * 
+*/
+
 class TupleNode {
     int wt;
     int node;

@@ -33,6 +33,14 @@ Explanation:
 The starting pixel is already colored with 0, which is the same as the target color. 
 Therefore, no changes are made to the image.
  */
+class Pair{
+    int first;
+    int second;
+    public Pair(int first, int second){
+        this.first = first;
+        this.second = second;
+    }
+}
 public class FloodFill {
     public static void main(String[] args) {
         FloodFill sol = new FloodFill();

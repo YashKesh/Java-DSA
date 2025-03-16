@@ -16,7 +16,7 @@ public class houserobber {
     }
     public static int solve(int n,int[] dp,int[] nums){
         if(n<0){
-            return 0;
+            return 0;   
         }
         if(n==0){
             return nums[0];
