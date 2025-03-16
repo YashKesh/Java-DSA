@@ -3,6 +3,11 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.Queue;
+/*
+ * There can be case where the adjacent node might have been visited earlier and tried to access that from a diff path 
+ * which is not allowed in graph traversal. So we need to keep track of visited nodes to avoid such 
+ * cases. We can use a set to keep track of visited nodes.
+ */
 class Pair{
     int first;
     int second;

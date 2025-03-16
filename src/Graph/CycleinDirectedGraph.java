@@ -3,6 +3,10 @@ import java.util.*;
 /*
 Given an undirected graph with V vertices and E edges, check whether it contains any cycle or not.
 Graph is in the form of adjacency list where adj[i] contains all the nodes ith node is having edge with.
+
+
+When BFS is used to detect a cycle in directed graph then topological sort is used as topological sort is not possible in directed 
+cyclic graph
  */
 public class CycleinDirectedGraph {
     public static void main(String[] args) {
