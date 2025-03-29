@@ -1,5 +1,13 @@
 package Graph;
 import java.util.*;
+/*
+ * Given an undirected graph represented by the number of vertices and a list of edges, 
+ * find the length of the shortest cycle in the graph.
+ * The length of a cycle is the number of edges in the cycle.
+ * If there is no cycle in the graph, return -1.
+ * If there is a cycle in the graph, return the length of the shortest cycle.
+ * 
+ */
 public class FindShortestCycle {
     public static void main(String[] args) {
         FindShortestCycle sol = new FindShortestCycle();
