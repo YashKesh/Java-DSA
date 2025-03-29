@@ -1,5 +1,7 @@
 package Graph;
-import  java.util.*;
+
+import java.util.*;
+
 /*
  * Accounts Merged DSA question
  * Given a list of accounts where each element accounts[i] is a list of strings, where the first element accounts[i][0] is a name,
@@ -29,42 +31,45 @@ Input: accounts = [["Gabe","Gabe0@m.co","Gabe3@m.co","Gabe1@m.co"],["Kevin","Kev
 Output: [["Ethan","Ethan0@m.co","Ethan4@m.co","Ethan5@m.co"],["Gabe","Gabe0@m.co","Gabe1@m.co","Gabe3@m.co"],["Hanzo","Hanzo0@m.co","Hanzo1@m.co","Hanzo3@m.co"],["Kevin","Kevin0@m.co","Kevin3@m.co","Kevin5@m.co"],["Fern","Fern0@m.co","Fern1@m.co","Fern5@m.co"]]
  */
 public class AccountsMerged {
-    static List<List<String>> accountsMerge(List<List<String>> accounts) {
-        // code here
+    public static List<List<String>> accountsMerge(List<List<String>> accounts) {
         int n = accounts.size();
         DisjointSet ds = new DisjointSet(n);
-        HashMap<String,Integer> mapmailnode = new HashMap<>();;
-        for(int i = 0;i<accounts.size();i++){
-            for(int j = 1;j<accounts.get(i).size();j++){
+        HashMap<String, Integer> mapMailNode = new HashMap<>();
+
+        for (int i = 0; i < n; i++) {
+            for (int j = 1; j < accounts.get(i).size(); j++) {
                 String mail = accounts.get(i).get(j);
-                if(!mapmailnode.containsKey(mail)){
-                    mapmailnode.put(mail,i);
-                }else{
-                    ds.unionBySize(i,mapmailnode.get(mail));
+                if (!mapMailNode.containsKey(mail)) {
+                    mapMailNode.put(mail, i);
+                } else {
+                    ds.unionBySize(i, mapMailNode.get(mail));
                 }
             }
         }
-        ArrayList<String>[] mergedmail = new ArrayList[n];
-        for(int i = 0;i<n;i++){
-            mergedmail[i] = new ArrayList<String>();
+
+        // Use an ArrayList of ArrayLists instead of array of ArrayLists
+        ArrayList<ArrayList<String>> mergedMail = new ArrayList<>();
+        for (int i = 0; i < n; i++) {
+            mergedMail.add(new ArrayList<>());
         }
-        for(Map.Entry<String,Integer> entry : mapmailnode.entrySet()){
+
+        for (Map.Entry<String, Integer> entry : mapMailNode.entrySet()) {
             String mail = entry.getKey();
-            int node =  ds.findParent(entry.getValue());
-            mergedmail[node].add(mail);
+            int node = ds.findParent(entry.getValue());
+            mergedMail.get(node).add(mail);
         }
+
         List<List<String>> ans = new ArrayList<>();
-        for(int i = 0;i<n;i++){
-            if(mergedmail[i].size()==0)continue;
-            Collections.sort(mergedmail[i]);
+        for (int i = 0; i < n; i++) {
+            if (mergedMail.get(i).isEmpty())
+                continue;
+            Collections.sort(mergedMail.get(i));
             List<String> temp = new ArrayList<>();
-            temp.add(accounts.get(i).get(0));
-            for(String st : mergedmail[i]){
-                temp.add(st);
-            }
+            temp.add(accounts.get(i).get(0)); // Add name
+            temp.addAll(mergedMail.get(i)); // Add sorted emails
             ans.add(temp);
         }
-        return ans;
 
+        return ans;
     }
 }
