@@ -13,6 +13,40 @@ public class ShortestDAG {
         ShortestDAG sol = new ShortestDAG();
         System.out.println();
     }
+    public int[] shortestPath(int V, int E, int[][] edges) {
+        // Code here
+        ArrayList<ArrayList<Pair>> adj = new ArrayList<>();
+        for(int i = 0;i<V;i++){
+            adj.add(new ArrayList<>());
+        }
+        for(int[] edge : edges){
+            adj.get(edge[0]).add(new Pair(edge[1],edge[2]));
+        }
+        int[] dist = new int[V];
+        Arrays.fill(dist , (int)1e9);
+        dist[0] = 0;
+        PriorityQueue<Pair> pq = new PriorityQueue<>((x,y)-> x.first - y.first);
+        pq.add(new Pair(0,0));
+        while(!pq.isEmpty()){
+            Pair node = pq.poll();
+            int nodedist = node.first;
+            int vertex = node.second;
+            for(Pair adjnodes : adj.get(vertex)){
+                int adjnode = adjnodes.first;
+                int adjwt = adjnodes.second;
+                if(dist[vertex] + adjwt < dist[adjnode]){
+                    dist[adjnode] = dist[vertex] + adjwt;
+                    pq.add(new Pair(dist[adjnode] , adjnode));
+                }
+            }
+        }
+        for(int i = 0;i<V;i++){
+            if(dist[i] == (int)1e9){
+                dist[i] = -1;
+            }
+        }
+        return dist;
+    }
         public void dfs(int start,List<List<Pair>> adj,boolean[] visited,Stack<Integer> stack){
             visited[start] = true;
             for(Pair num : adj.get(start)){

@@ -4,7 +4,6 @@ import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.PriorityQueue;
 import java.util.Queue;
-
 /*
  * Given a grid of size n x m, 1 represents a path and 0 represents a blocked cell.
  * The task is to find the shortest path between a given source cell to a destination cell.

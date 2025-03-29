@@ -1,5 +1,11 @@
 package Graph;
 import java.util.*;
+/*
+ * Given a start word, target word, and a list of words, find the length of the shortest transformation sequence from start to target.
+ * Each transformed word must exist in the word list, and only one letter can be changed at a time.
+ * The transformation sequence must begin with the start word and end with the target word.
+ * If no such transformation sequence exists, return 0.
+ */
 public class WordLadder1 {
 
         public int wordLadderLength(String startWord, String targetWord, List<String> wordList) {
