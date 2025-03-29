@@ -1,5 +1,21 @@
 package Dynamic_programming;
 import  java.util.*;
+/*
+    * There is a pizza with 3n slices of varying size, you and your friends will take slices of pizza as follows:
+    * You will pick any pizza slice.
+    * Your friend Alice will pick next slice in anti clockwise direction of your pick.
+    * Your friend Bob will pick next slice in clockwise direction of your pick.
+    * Repeat the process until you and your friends have taken all n/3 slices.
+    * All slices have different size.
+    * Return the maximum possible sum of slice sizes which you can have.
+    * Example:
+    * Input: slices = [1,2,3,4,5,6]
+    * Output: 10
+    * Constraints:
+    * 1 <= slices.length <= 500
+    * slices.length % 3 == 0
+    * 1 <= slices[i] <= 1000
+ */
 public class Pizza3Nslices {
     public static void main(String[] args) {
         Pizza3Nslices sol = new Pizza3Nslices();

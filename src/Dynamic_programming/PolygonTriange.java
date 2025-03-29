@@ -1,5 +1,12 @@
 package Dynamic_programming;
 import java.util.*;
+/*
+ * Given N, consider a convex N-sided polygon with vertices labelled A[0], A[i], ..., A[N-1] in clockwise order.
+ * Then consider a triangulation of the polygon into N-2 triangles. For each triangle, the value of that triangle is the
+ * corresponding value of the corresponding vertex in the corresponding triangle. (Value(A, B, C) = A * B * C)
+ * For each triangle, we return the product of the values of each vertex of the triangle.  Return the largest possible sum of the
+ * values of the vertices .
+ */
 public class PolygonTriange {
     public static void main(String[] args) {
         PolygonTriange sol = new PolygonTriange();

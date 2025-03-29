@@ -1,5 +1,12 @@
 package Dynamic_programming;
 import  java.util.*;
+/*
+    * Given a number N. Find the minimum number of squares that sum to N.
+    * Example:
+    * Input: N = 5
+    * Output: 2
+    * Explanation: 5 can be written as 1^2 + 2^2
+ */
 public class MinSquares {
     public static void main(String[] args) {
         MinSquares sol = new MinSquares();

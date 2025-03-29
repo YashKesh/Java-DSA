@@ -1,5 +1,14 @@
 package Dynamic_programming;
 import java.util.*;
+/*
+ * Given two integer arrays `nums1` and `nums2` of the same length, your task is to find the minimum number of swaps required to
+ *  make `nums1` equal to `nums2`.
+
+A swap consists of choosing two indices `i` and `j` where `0 <= i < j < nums1.length` and 
+swapping the elements at `nums1[i]` and `nums1[j]`.
+
+Return the minimum number of swaps required to make `nums1` equal to `nums2`. If it is not possible, return `-1`.
+ */
 public class MinSwapsReq {
     public static void main(String[] args) {
         MinSwapsReq spl = new MinSwapsReq();

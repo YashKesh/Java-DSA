@@ -1,5 +1,16 @@
 package Dynamic_programming;
 import java.util.*;
+/*
+    * Given a string, your task is to count how many palindromic substrings in this string.
+    * Example 1:
+    * Input: s = "abc"
+    * Output: 3
+    * Explanation: "a", "b", "c" are the 3 palindromic substrings.
+    * Example 2:
+    * Input: s = "aaa"
+    * Output: 6
+    * Explanation: "a", "a", "a", "aa", "aa", "aaa" are the 6 palindromic substrings.
+ */
 public class PalindromicSubStrings {
     public static void main(String[] args) {
         PalindromicSubStrings sol = new PalindromicSubStrings();
