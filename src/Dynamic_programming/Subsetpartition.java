@@ -1,5 +1,11 @@
 package Dynamic_programming;
-
+/*
+ * Given a set of positive integers, determine if it can be partitioned into two subsets such that the sum of elements 
+ * in both subsets is equal.
+ * Example:
+ * Input: nums = [1,5,11,5]
+ * Output: true
+ */
 public class Subsetpartition {
     public static void main(String[] args) {
         Subsetpartition sol = new Subsetpartition();

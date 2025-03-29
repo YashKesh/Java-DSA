@@ -1,5 +1,10 @@
 package Dynamic_programming;
 import java.util.*;
+/*
+ * Given a matrix of 0s and 1s, find the largest square submatrix of 1s.
+ * If the matrix is not square then the largest square submatrix is returned
+ * 
+ */
 public class SquareFormedInMatrix {
         public static void main(String[] args) {
             SquareFormedInMatrix sol = new SquareFormedInMatrix();

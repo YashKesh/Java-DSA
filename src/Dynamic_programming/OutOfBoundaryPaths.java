@@ -1,5 +1,30 @@
 package Dynamic_programming;
 import java.util.*;
+/*
+ * There is an m x n grid with a ball. The ball is initially at the position [startRow, startColumn].
+ * The ball is then at the position [row, column]. The ball is then at the position [startRow, startColumn + 1]. 
+ * The ball is then at the position [startRow, startColumn + 2], and so on.
+ * The ball moves in all four directions until it hits the wall. When the ball hits a wall, it bounces off the wall 
+ * and moves in the opposite direction.
+ * Return the number of paths the ball can take to reach the boundary of the grid. The answer is guaranteed to be less than 2^31.
+ * Example:
+ * Input: m = 1, n = 3, maxMove = 3, startRow = 0, startColumn = 1
+ * Output:
+ * 12
+    * Explanation:
+    * 0 -> 1 -> 2 -> 2 -> 1 -> 1 (right, down, down, right, down, right)
+    * 0 -> 1 -> 2 -> 2 -> 0 -> 1 (right, down, down, left, up, right)
+    * 0 -> 1 -> 2 -> 1 -> 1 -> 1 (right, down, right, down, right, right)
+    * 0 -> 1 -> 2 -> 1 -> 0 -> 1 (right, down, right, down, left, right)
+    * 0 -> 1 -> 1 -> 1 -> 1 -> 1 (right, down, right, down, right, right)
+    * 0 -> 1 -> 1 -> 1 -> 0 -> 1 (right, down, right, down, left, right)
+    * 0 -> 1 -> 1 -> 0 -> 1 -> 1 (right, down, left, down, right, right)
+    * 0 -> 1 -> 1 -> 0 -> 0 -> 1 (right, down, left, down, left, right)
+    * 0 -> 1 -> 0 -> 1 -> 1 -> 1 (right, down, up, down, right, right)
+    * 0 -> 1 -> 0 -> 1 -> 0 -> 1 (right, down, up, down, left, right)
+    * 0 -> 1 -> 0 -> 0 -> 1 -> 1 (right, down, up, left, right, right)
+    * 0 -> 1 -> 0 -> 0 -> 0 -> 1 (right, down, up, left, up, right)
+ */
 public class OutOfBoundaryPaths {
     public static void main(String[] args) {
         OutOfBoundaryPaths sol = new OutOfBoundaryPaths();
