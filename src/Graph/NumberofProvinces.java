@@ -14,7 +14,6 @@ public class NumberofProvinces {
         NumberofProvinces sol = new NumberofProvinces();
         System.out.println(sol.findCircleNum(new int[][]{{1,1,0},{1,1,0},{0,0,1}}));
     }
-//    class Solution {
         public void dfs(boolean[] visited,ArrayList<ArrayList<Integer>> adj,int node){
             visited[node] = true;
             for(int i:adj.get(node)){
@@ -49,4 +48,3 @@ public class NumberofProvinces {
             return count;
         }
     }
-//}

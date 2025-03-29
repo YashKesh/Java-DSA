@@ -2,7 +2,11 @@ package Graph;
 
 import java.util.ArrayList;
 import java.util.*;
-
+/*
+ * Given a binary matrix of size n x m, where each cell can be either 0 or 1.
+ * You need to find the distance of the nearest 1 in the matrix for each cell.
+ * The distance between two adjacent cells is 1.
+ */
 public class Nearest1 {
     public static void main(String[] args) {
         Nearest1 sol = new Nearest1();
