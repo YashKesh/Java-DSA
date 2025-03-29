@@ -1,5 +1,9 @@
 package Graph;
 import java.util.*;
+/*
+ * Given an undirected graph represented by the number of vertices and a list of edges,
+ * return the number of vertices in the cycle.
+ */
 public class CycleusingDFS {
 
     public static void main(String[] args) {

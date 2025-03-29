@@ -1,5 +1,12 @@
 package Dynamic_programming;
-
+/*
+ * Given a number n, find the total number of derangements possible for the numbers from 1 to n.
+ * A derangement is a permutation of the numbers from 1 to n where no element appears in its original position.
+ *
+ * For example, for n = 3, the derangements are [2, 3, 1], [3, 1, 2], [3, 2, 1].
+ *
+ * Input:
+ */
 public class TotalDeArrangements {
     public static void main(String[] args) {
         int n = 5;
