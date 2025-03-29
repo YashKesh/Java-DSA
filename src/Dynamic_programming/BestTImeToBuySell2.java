@@ -15,7 +15,8 @@ public class BestTImeToBuySell2 {
     public static void main(String[] args) {
 
         BestTImeToBuySell2 sol = new BestTImeToBuySell2();
-        System.out.println();
+        System.out.println(sol.maxProfit(new int[]{7,1,5,3,6,4}));
+        // System.out.println();
     }
 //    class Solution {
         public int solve(int[] prices,int index,int buy,int[][] dp){

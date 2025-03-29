@@ -14,7 +14,7 @@ public class LongestValidParanthesis {
             map.put('(',')');
             int start = -1;
             int max = 0;
-            Stack<Integer> stack = new Stack();
+            Stack<Integer> stack = new Stack<>();
             for(int i = 0;i<s.length();i++){
                 char temp = s.charAt(i);
                 if(map.containsKey(temp)){

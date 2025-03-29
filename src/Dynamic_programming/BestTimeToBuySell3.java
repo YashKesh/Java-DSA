@@ -12,6 +12,7 @@ import java.util.*;
 public class BestTimeToBuySell3 {
     public static void main(String[] args) {
         BestTimeToBuySell3 sol = new BestTimeToBuySell3();
+        System.out.println(sol.maxProfit(new int[]{3,3,5,0,0,3,1,4}));
     }
 //    class Solution {
         public int solve(int[] prices,int index,int buy,int[][][] dp,int limit){
