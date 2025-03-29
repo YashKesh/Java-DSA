@@ -13,7 +13,7 @@ public class ShortestDAG {
         ShortestDAG sol = new ShortestDAG();
         System.out.println();
     }
-    public int[] shortestPath(int V, int E, int[][] edges) {
+    public int[] shortestPathBFS(int V, int E, int[][] edges) {
         // Code here
         ArrayList<ArrayList<Pair>> adj = new ArrayList<>();
         for(int i = 0;i<V;i++){
