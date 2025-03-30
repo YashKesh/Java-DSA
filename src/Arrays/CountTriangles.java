@@ -1,5 +1,12 @@
 package Arrays;
 import java.util.Arrays;
+/*
+ * Given an array of integers. Count the number of triangles that can be formed with three different elements as three sides of triangles.
+ * Example:
+ * Input: arr = {10, 21, 22, 100, 101, 200, 300}
+ * Output: 
+ * 
+ */
 public class CountTriangles {
     public static void main(String[] args) {
         int[] arr = {10, 21, 22, 100, 101, 200, 300};
