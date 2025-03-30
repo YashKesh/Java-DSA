@@ -1,8 +1,18 @@
 package Dynamic_programming;
 import java.util.*;
+/*
+ * Say you have an array for which the ith element is the price of a given stock on day i.
+ *
+ * Design an algorithm to find the maximum profit. You may complete at most k transactions.
+ *
+ * Note:
+ * You may not engage in multiple transactions simultaneously (i.e., you must sell the stock before you buy again).
+ */
 public class BestTimeToSell4 {
     public static void main(String[] args) {
-        BestTimeToBuySell3 sol = new BestTimeToBuySell3();
+        BestTimeToSell4 sol = new BestTimeToSell4();
+        int[] prices = new int[]{3,2,6,5,0,3};
+        System.out.println(sol.maxProfit(2,prices));
     }
 //    class Solution {
         public int solve(int[] prices,int index,int buy,int limit,int k,int[][][] dp){

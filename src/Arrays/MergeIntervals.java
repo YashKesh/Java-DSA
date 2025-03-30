@@ -18,6 +18,9 @@ public class MergeIntervals {
     public static void main(final String[] args) {
         final MergeIntervals sol = new MergeIntervals();
         final int[][] ans = sol.merge(new int[][]{{1, 3}, {2, 6}, {8, 10}, {15, 18}});
+        for(final int[] interval : ans){
+            System.out.println("[" + interval[0] + ", " + interval[1] + "]");
+        }
 
     }
     public int[][] merge(final int[][] intervals) {

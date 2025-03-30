@@ -2,6 +2,17 @@ package Backtracking;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
+/*
+    * Given a matrix of size NxN, where each cell contains a value between 0 and 9. The matrix represents the oxygen levels in the cells.
+    * The scuba diver starts at the top left corner of the matrix and can only move right, down, left, and up.
+    * The scuba diver can only move to a cell if the sum of the oxygen levels of the current cell and the destination 
+    cell is less than or equal to the initial oxygen level.
+    * The scuba diver can only move to a cell with an oxygen level of 9 without any restrictions.
+    * Find all the paths the scuba diver can take to reach the bottom right corner of the matrix.
+    * Return all the paths as strings in the format "x,y,z" where x, y, and z are the coordinates of the cells visited in the path.
+    * Return an empty list if no feasible path is found.
+
+ */
 public class ScubaDivingPaths {
 
         static int[][] directions = {{0, 1}, {1, 0}, {0, -1}, {-1, 0}};

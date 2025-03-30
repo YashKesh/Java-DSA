@@ -1,5 +1,19 @@
 package Dynamic_programming;
 import java.util.*;
+/*
+    * Given a matrix of integers A with R rows and C columns, find the minimum cost to reach from the cell (0, 0) to the cell (R-1, C-1).
+    * You can only move down, right and diagonally lower cells from a given cell, i to a cell j, if i <= j.
+    * If two or more paths, have the same cost, then return the path that has the maximum number of cells.
+    * If there are more than one path with the maximum number of cells, then return the path that has the maximum 
+    value when traversing the cells in the path.
+    * If there is no path possible then return an empty array.
+    * Input 1:
+    * A = [ [3, 4, 1, 2],
+    *       [2, 1, 8, 9],
+    *       [4,7,8,1] ]
+    * Output 1:
+    * [1, 2, 3, 4]
+ */
 public class MinCostPath {
     public static void main(String[] args) {
         System.out.println(minCostPath(new int[][]{{3,4,1,2,},{2,1,8,9},{4,7,8,1}},2,3));

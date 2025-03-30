@@ -1,11 +1,25 @@
 package LinkedList;
 
 // Definition for singly-linked list.
-
+/*
+    * Given two sorted linked lists, merge them into a single sorted linked list.
+    * The merged linked list should also be sorted.
+ */
 
 public class MergetwosortLL {
     public static void main(String[] args) {
         MergetwosortLL sol = new MergetwosortLL();
+        ListNode l1 = new ListNode(1);
+        l1.next = new ListNode(2);
+        l1.next.next = new ListNode(4);
+        ListNode l2 = new ListNode(1);
+        l2.next = new ListNode(3);
+        l2.next.next = new ListNode(4);
+        ListNode mergedList = sol.mergeTwoLists(l1, l2);
+        while (mergedList != null) {
+            System.out.print(mergedList.val + " ");
+            mergedList = mergedList.next;
+        }
 
 //        ListNode ans = sol.mergeTwoLists()
     }

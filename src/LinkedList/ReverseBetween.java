@@ -1,5 +1,9 @@
 package LinkedList;
-
+/*
+ * Given a singly linked list L: L0→L1→…→Ln-1→Ln,
+ * reorder it to: L0→Ln→L1→Ln-1→L2→Ln-2→…
+ * You may not modify the values in the list's nodes, only nodes itself may be changed.
+ */
 public class ReverseBetween {
     /**
      * Definition for singly-linked list.
@@ -13,6 +17,16 @@ public class ReverseBetween {
      */
     public static void main(String[] args) {
         ReverseBetween sol  = new ReverseBetween();
+        ListNode head = new ListNode(1);
+        head.next = new ListNode(2);
+        head.next.next = new ListNode(3);
+        head.next.next.next = new ListNode(4);
+        head.next.next.next.next = new ListNode(5);
+        ListNode ans = sol.reverseBetween(head,2,4);
+        while(ans!=null){
+            System.out.print(ans.val+" ");
+            ans = ans.next;
+        }
 
     }
         public ListNode reverseBetween(ListNode head, int left, int right) {

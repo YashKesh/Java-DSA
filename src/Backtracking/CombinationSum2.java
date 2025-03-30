@@ -2,6 +2,12 @@ package Backtracking;
 //import  jav
 
 import java.util.*;
+/*
+ * Given a number N. Find all the unique combinations in candidates where the candidate numbers sum to T.
+ * For example, given candidate set 2,3,6,7 and target 7, A solution set is [7], [2, 2, 3] and [3, 4].
+ * For example, given candidate set 2,3,5 and target 8, A solution set is [2, 2, 2, 2], [2, 3, 3] and [3, 5].
+ * For example, given candidate set 2,2,1,5,3,6,8 and target 12, A solution set is [2, 2, 3, 5], [2, 2, 8], [2, 3, 6], [2, 6, 3], [2, 5, 5], [3, 3, 6], [3, 5, 3], [5, 5, 2], [6, 6], [8, 2, 2].
+ */
 
 public class CombinationSum2 {
     public static void main(String[] args) {
@@ -33,7 +39,7 @@ public class CombinationSum2 {
             int start = 0,sum1= 0;
             Arrays.sort(candidates);
             List<Integer> list1 = new ArrayList<>();
-            check(res,candidates,target,0,0,list1);
+            check(res,candidates,target, sum1 ,start,list1);
             return res;
 
 

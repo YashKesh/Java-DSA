@@ -1,5 +1,12 @@
 package Dynamic_programming;
 import java.util.*;
+/*
+    * Given a number N. Find the minimum number of coins that sum to N.
+    * Example:
+    * Input: coins = [1,2,3,5], amount = 11
+    * Output: 3
+    * Explanation: 11 = 5 + 5 + 1
+ */
 public class CoinChange {
     public static void main(String[] args) {
         CoinChange sol = new CoinChange();

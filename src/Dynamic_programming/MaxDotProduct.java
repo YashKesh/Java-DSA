@@ -1,6 +1,19 @@
 package Dynamic_programming;
 import  java.util.*;
+/*
+    * Given two arrays nums1 and nums2.
+    * Return the maximum dot product between non-empty subsequences of nums1 and nums2 with the same length.
+    * nums1.length, nums2.length <= 5000
+    * nums1, nums2 are non-empty arrays having the same length
+    * Example 1:
+    * Input: nums1 = [2,1,-2,5], nums2 = [3,0,-6]
+    * Output: 18
+ */
 public class MaxDotProduct {
+        public static void main(String[] args) {
+            MaxDotProduct sol = new MaxDotProduct();
+            System.out.println(sol.maxDotProduct(new int[]{2,1,-2,5},new int[]{3,0,-6}));
+        }
 //    class Solution {
         public int solve(int i,int j,int[] nums1,int[] nums2,int n,int m,int[][] dp){
             if(i==n || j==m){
@@ -36,13 +49,13 @@ public class MaxDotProduct {
                 secondMin = Math.min(secondMin, num);
             }
 
-            if (firstMax < 0 && secondMin > 0) {
-                return firstMax * secondMin;
-            }
+            // if (firstMax < 0 && secondMin > 0) {
+            //     return firstMax * secondMin;
+            // }
 
-            if (firstMin > 0 && secondMax < 0) {
-                return firstMin * secondMax;
-            }
+            // if (firstMin > 0 && secondMax < 0) {
+            //     return firstMin * secondMax;
+            // }
             int[][] dp = new int[n][m];
             for(int[] sub:dp){
                 Arrays.fill(sub,-1);

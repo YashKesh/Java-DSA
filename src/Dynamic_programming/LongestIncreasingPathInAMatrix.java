@@ -1,6 +1,19 @@
 package Dynamic_programming;
 
 import java.util.Arrays;
+/*
+ * Given a matrix of integers, find the length of the longest increasing path.
+ * The length of the path is defined as the number of consecutive integers in the path.
+ * If there is no increasing path, return 0.
+ * 
+ * Example 1:
+ * Input: matrix =
+ * [ [9,9,4],
+ *  [6,6,8],
+ * [2,1,1] ]
+ * Output: 4
+ * Explanation: The longest increasing path is [1, 2, 6, 9].
+ */
 
 public class LongestIncreasingPathInAMatrix {
     public static void main(String[] args) {
