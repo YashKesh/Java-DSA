@@ -1,5 +1,12 @@
 package Dynamic_programming;
 import java.util.*;
+/*
+    * Given an array of integers, find the length of the longest (strictly) increasing subsequence from the given array.
+    * Example:
+    * Input: N = 5, arr[] = {1,2,0,5,6}
+    * Output: 4
+    * Explanation: The longest increasing subsequence is 1 2 5 6
+ */
 public class longestIncreeasingSub {
     public static void main(String[] args) {
         // longestIncreeasingSub sol = new longestIncreeasingSub();

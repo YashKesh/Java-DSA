@@ -1,5 +1,32 @@
 package Dynamic_programming;
+/*
+    
+In the classic problem of the knight's tour, we are given a chessboard of size `N x N` 
+and a knight initially positioned at any cell. The knight wants to visit every square exactly once, returning to its starting cell.
 
+However, there is a twist: The knight must only move to squares that are adjacent horizontally, vertically, or diagonally. 
+Furthermore, the knight cannot move to a square that has already been visited.
+
+Given an integer `N`, return the number of distinct ways the knight can visit every square on the chessboard.
+
+Example 1:
+Input: N = 1
+Output: 1
+
+Example 2:
+Input: N = 2
+
+Output: 2
+
+Explanation: There are two distinct ways to visit every square on a 2 x 2 chessboard.
+
+Example 3:
+Input: N = 3
+Output: 6
+
+Explanation: There are 6 distinct ways to visit every square on a 3 x 3 chessboard.
+
+ */
 public class KnightDialer {
     public static void main(String[] args) {
         KnightDialer sol = new KnightDialer();

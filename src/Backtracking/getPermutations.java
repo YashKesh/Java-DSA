@@ -1,5 +1,10 @@
 package Backtracking;
 import java.util.*;
+/*
+ * Given a number N. Find all the unique combinations in candidates where the candidate numbers sum to T.
+ * For example, given candidate set 2,3,6,7 and target 7, A solution set is [7], [2, 2, 3] and [3, 4].
+ * For example, given candidate set 2,3,5 and target 8, A solution set is [2, 2, 2, 2], [2, 3, 3] and [3, 5].
+ */
 
 public class getPermutations {
     static void swap(char[] s, int i, int j) {

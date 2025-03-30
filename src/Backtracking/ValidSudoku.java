@@ -1,5 +1,14 @@
 package Backtracking;
-
+/*
+    * Given a Sudoku board, return true if the board is solvable, otherwise return false.
+    * The board is solved in place.
+    * Each row, column, and 3x3 subgrid of the board should contain all of the digits from 1-9 without repetition.
+    * The board size is 9x9.
+    * A valid Sudoku board (partially filled) is not necessarily solvable.
+    * Only the filled cells need to be validated according to the mentioned rules.
+    * The board is a 2D char array, where the empty cells are filled with the character '.'.
+    * You may assume that there will be only one unique solution.
+ */
 public class ValidSudoku {
     public static void main(String[] args) {
         ValidSudoku sol = new ValidSudoku();

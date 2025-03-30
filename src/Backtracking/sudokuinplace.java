@@ -1,5 +1,12 @@
 package Backtracking;
-
+/*
+    * Given a Sudoku board, return true if the board is solvable, otherwise return false.
+    * The board is solved in place.
+    * Each row, column, and 3x3 subgrid of the board should contain all of the digits from 1-9 without repetition.
+    * The board size is 9x9.
+    * The board is a 2D char array, where the empty cells are filled with the character '.'.
+    * You may assume that there will be only one unique solution.
+ */
 public class sudokuinplace {
     public static boolean isSafe(char[][] board,int row,int col,char num){
         for(int i = 0;i<board.length;i++){

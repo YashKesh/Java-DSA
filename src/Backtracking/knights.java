@@ -1,5 +1,13 @@
 package Backtracking;//package com.kunal.backtracking;
-
+/*
+ * Given a chessboard of size NxN, find all unique configurations of placing N knight pieces on the board such that no 
+ * two knight pieces attack each other.
+ *
+ * Constraints:
+ * 1 <= N <= 8
+ *
+ * Example:
+ */
 public class knights {
     public static void main(String[] args) {
         int n = 4;
